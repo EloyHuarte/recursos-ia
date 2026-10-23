@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Recursos de la charla de IA</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500..700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101b2d;--card:#1b2a44;--ink:#f6f3ec;--muted:#b8c2d1;--orange:#f28c28;--paper:#f6f3ec;--line:#2c3e5e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:var(--ink);font-family:'Public Sans',Arial,sans-serif;line-height:1.55;font-size:17px}
+a{color:var(--orange)}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 32px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin:0 0 14px}
+h1{font-family:Oswald,Arial,sans-serif;font-weight:600;font-size:clamp(36px,8vw,60px);line-height:1.05;margin:0 0 14px}
+.lead{color:var(--muted);font-size:19px;margin:0}
+nav{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 8px}
+nav a{background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none;padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600}
+section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 24px;margin:20px 0}
+h2{font-family:Oswald,Arial,sans-serif;font-weight:600;font-size:30px;line-height:1.15;margin:0 0 10px}
+.tag{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin:0 0 6px}
+p{margin:0 0 14px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.btn{display:inline-block;background:var(--orange);color:var(--navy);font-weight:700;text-decoration:none;padding:12px 20px;border-radius:12px;border:0;font-size:16px;font-family:inherit;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--muted)}
+pre{background:var(--navy);border:1px solid var(--line);border-radius:12px;padding:16px;white-space:pre-wrap;word-wrap:break-word;font-family:'SFMono-Regular',Menlo,Consolas,monospace;font-size:14.5px;line-height:1.5;margin:10px 0 12px;color:var(--ink)}
+ul,ol{padding-left:22px;margin:0 0 14px}li{margin-bottom:8px}
+.tree{font-family:Menlo,Consolas,monospace;font-size:14.5px;background:var(--navy);border:1px solid var(--line);border-radius:12px;padding:16px;white-space:pre;overflow-x:auto;margin:10px 0 14px}
+.note{color:var(--muted);font-size:15px}
+footer{padding:20px 0 56px;color:var(--muted);font-size:14px}
+details{margin:10px 0}summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="eyebrow">Sesión de networking · Navarra Arena</p>
+  <h1>Recursos de la charla de IA</h1>
+  <p class="lead">Todo lo que he enseñado, para que te lo lleves y lo uses. Todo es gratis y lo puedes copiar.</p>
+  <nav>
+    <a href="#agua">App de agua</a><a href="#corea">Guía de Corea</a><a href="#prompt">Prompt</a><a href="#carpetas">Carpetas</a><a href="#fotos">Fotos</a><a href="#fuentes">Fuentes</a><a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="agua">
+  <p class="tag">Ejemplo · App a medida</p>
+  <h2>App de agua, sin anuncios</h2>
+  <p>La hice con la IA porque la app que usaba mi mujer estaba llena de publicidad. Es una web sencilla que guarda tu progreso.</p>
+  <div class="btns">
+    <a class="btn" href="https://eloyhuarte.github.io/agua/">Abrir la app</a>
+    <a class="btn alt" href="https://github.com/EloyHuarte/agua">Ver y descargar el código</a>
+  </div>
+  <p class="note" style="margin-top:14px">En el móvil: ábrela y usa "Añadir a pantalla de inicio" para tenerla como una app.</p>
+</section>
+
+<section id="corea">
+  <p class="tag">Ejemplo · Guía de viaje</p>
+  <h2>Guía de viaje a Corea del Sur</h2>
+  <p>Así queda una guía de viaje hecha con IA: itinerario, mapa, alojamientos y documentos. Es una copia de muestra: los nombres, reservas y códigos son ficticios.</p>
+  <div class="btns"><a class="btn" href="https://eloyhuarte.github.io/corea-2026/">Abrir la guía</a></div>
+</section>
+
+<section id="prompt">
+  <p class="tag">Mi método</p>
+  <h2>Que la IA te pregunte a ti</h2>
+  <p>Antes pedía la solución. Después, "el mejor prompt". Ahora le doy la idea base y le pido que me haga las preguntas. Copia, cambia lo que va entre corchetes y pégalo en la IA que uses.</p>
+  <pre id="p1">Tengo esta idea base: [escribe aquí tu idea].
+
+No me des la solución todavía. Hazme, de una en una, todas las preguntas que necesites para sacar lo que tengo en la cabeza: el objetivo, para quién es, qué datos o material tengo, qué límites hay y qué podría salir mal.
+
+Cuando tengas suficiente, dime qué has entendido y pídeme confirmación antes de escribir nada.</pre>
+  <button class="btn" onclick="cp('p1',this)">Copiar el prompt</button>
+</section>
+
+<section id="carpetas">
+  <p class="tag">Guía · Plantilla</p>
+  <h2>Una carpeta para trabajar con varias IAs</h2>
+  <p>Cada IA tiene su propia memoria. Si las normas y el material viven en tu carpeta, y no dentro de una conversación, puedes cambiar de IA y el proyecto sigue funcionando igual. Esta es la plantilla que uso yo.</p>
+  <div class="btns"><button class="btn" onclick="dlz()">Descargar la plantilla (.zip)</button></div>
+  <p class="note" style="margin-top:12px">Contiene la carpeta lista para copiar: CLAUDE.md, REGLAS.md, registro.md, las carpetas material/ y salidas/, y las instrucciones de uso.</p>
+
+  <p style="margin-top:22px"><strong>Cómo está montada</strong></p>
+  <div class="tree">_PLANTILLA_SISTEMA/
+├── CLAUDE.md    1 línea
+├── REGLAS.md    las normas
+├── registro.md  el diario
+├── material/    tu material
+└── salidas/     lo que genera la IA</div>
+
+  <p><strong>Para empezar una tarea nueva</strong></p>
+  <ol>
+    <li>Duplica la carpeta entera y ponle el nombre de la tarea (no el de la IA). Nunca trabajes dentro de la plantilla.</li>
+    <li>Mete en <em>material/</em> el contenido real de la tarea, tal cual: apuntes, PDFs, artículos, datos. <em>salidas/</em> déjala vacía.</li>
+    <li>Abre la carpeta con la IA que uses ese día. Te ofrecerá un repaso rápido de las normas y te hará preguntas para rellenar los huecos de REGLAS.md.</li>
+    <li>Deja CLAUDE.md y registro.md como están. Cuando REGLAS.md esté completo, escribe <strong>comencemos</strong>.</li>
+  </ol>
+
+  <p><strong>Las normas que lleva ya puestas</strong></p>
+  <ul>
+    <li><strong>Cómo te pregunta.</strong> Con opciones de elegir, en tandas cortas y con su recomendación primero. Solo hace una pregunta abierta si no hay otra forma.</li>
+    <li><strong>De dónde sale todo.</strong> La IA trabaja solo con lo que hay en <em>material/</em>. Si algo no está, lo dice; no lo estima ni lo inventa, ni datos, ni citas, ni referencias.</li>
+    <li><strong>Versiones.</strong> Todo archivo va a <em>salidas/</em> con el nombre <code>nombre_vX.Y.ext</code>. Empieza en 1.0, sube a 1.1 para cambios pequeños y a 2.0 para un cambio grande. Nunca se sobrescribe una versión anterior.</li>
+    <li><strong>Lo que nunca hace.</strong> Borrar, mover o sobrescribir <em>material/</em>; tocar archivos fuera de la carpeta; publicar o compartir nada sin tu confirmación; meter datos personales en <em>salidas/</em>; tocar los datos brutos; dar una fuente por buena sin decir qué es.</li>
+    <li><strong>Si duda.</strong> Para, te lo pregunta y lo apunta en <em>registro.md</em> como duda.</li>
+    <li><strong>Al terminar.</strong> Apunta en <em>registro.md</em>, con fecha: HECHO, VERSIÓN, FALLO y DUDA.</li>
+    <li><strong>Palabra de arranque.</strong> No empieza a trabajar hasta que escribes "comencemos".</li>
+  </ul>
+
+  <p><strong>La prueba antes de darla por montada.</strong> Si mañana cambias de IA, ¿cuántos archivos tendrías que tocar? Solo uno: el de instrucciones de esa herramienta (CLAUDE.md o su equivalente). Si son más, algo de REGLAS.md está en el sitio equivocado.</p>
+  <p><strong>Mantenimiento.</strong> Una vez por semana, lee <em>registro.md</em> y corrige una línea de REGLAS.md si algo se repite.</p>
+
+  <details>
+    <summary>Ver y copiar CLAUDE.md</summary>
+    <pre id="p2">Lee REGLAS.md y cúmplelo siempre.</pre>
+    <button class="btn alt" onclick="cp('p2',this)">Copiar</button>
+  </details>
+  <details>
+    <summary>Ver y copiar REGLAS.md (con los huecos por rellenar)</summary>
+    <pre id="p3">Esta carpeta es [la tarea, en una frase: el TFG sobre fuerza en corredores / la asignatura de Fisiología del Ejercicio / las prácticas en el club X / …].
+
+LO PRIMERO — SI ESTA HOJA TIENE HUECOS SIN RELLENAR
+Si aún quedan huecos entre corchetes en esta hoja, no empiezas ningún trabajo. Antes haces esto:
+0. Me preguntas si quiero un repaso rápido de las normas que ya vienen fijas en esta hoja, con dos
+   opciones: &quot;Repasar&quot; o &quot;Saltar&quot;. Si elijo repasar, me las resumes en una línea cada una (cómo te pregunto,
+   de dónde sale todo, dónde se guarda cada cosa, versiones, lo que nunca haces, dudas, registro y arranque) y me
+   preguntas si quiero cambiar alguna antes de seguir. Si elijo saltar, pasas directamente al punto 1.
+1. Me pides que te cuente en dos o tres frases de qué va el proyecto.
+2. Con lo que te cuente, me haces las mejores preguntas que se te ocurran para rellenar cada hueco: pocas, claras y en tandas cortas (máximo cuatro por mensaje), siguiendo &quot;CÓMO ME PREGUNTAS&quot;. Lo que ya se deduzca de mis respuestas no lo preguntas: me propones el texto y yo lo confirmo.
+3. Me enseñas cómo quedaría la hoja completa y, cuando te dé el visto bueno, rellenas los huecos en este archivo.
+4. La palabra de arranque es &quot;comencemos&quot;. Me preguntas si la quiero cambiar; si no digo nada, se queda esa.
+5. Revisas material/ y me dices qué hay y qué falta para hacer el trabajo (artículos, guía docente,
+   rúbrica, datos…). Si está vacía, me lo avisas antes de que escriba la palabra de arranque.
+6. Apuntas en registro.md &quot;HECHO: puesta en marcha&quot; con la fecha, junto con las DUDAS que hayan quedado.
+Es el único caso en el que puedes editar REGLAS.md sin que te lo pida.
+
+CÓMO ME PREGUNTAS
+Siempre que puedas, preguntas con opción múltiple, usando las preguntas con botones de opción si tu
+herramienta las tiene (tarjetas en las que solo hago clic). Vale para las de sí/no, para elegir entre
+opciones y también para las que parecen abiertas: me propones las respuestas más probables y dejas la
+opción de escribir otra. Si tienes varias preguntas, las agrupas en una misma tanda. Pones primero la
+opción que recomiendas y lo indicas.
+Si tu herramienta no tiene botones, numeras las opciones (A, B, C…) para que conteste con una letra.
+Solo haces una pregunta abierta cuando no hay forma razonable de proponer opciones.
+Si contesto &quot;no lo sé&quot;, lo apuntas en registro.md como DUDA pendiente y sigues con lo que no dependa de eso.
+
+QUÉ HAY AQUÍ
+- material/ : todo el material de partida (apuntes, PDFs, artículos, guía docente, rúbricas, datos, capturas…), tal cual, sin ordenar ni resumir. Es solo de lectura.
+- salidas/ : todo lo que genera la IA, con su versión.
+- registro.md : lo que se ha hecho, lo que ha fallado y las dudas de cada sesión, con fecha. Lo escribe la IA, no yo.
+
+REGLA CERO — DE DÓNDE SALE TODO
+Trabajas SOLO con lo que hay en material/ (y en esta carpeta). Si algo no está, lo dices: &quot;esto no está en tu material&quot;. No lo rellenas, no lo estimas ni lo inventas por tu cuenta. Esto incluye datos, cifras, citas y referencias bibliográficas.
+
+QUÉ HACES
+[el trabajo, en una o dos frases: ayudarme a estructurar y revisar el TFG / prepararme el examen con preguntas tipo test / …]
+
+CÓMO LO HACES
+[dos o tres líneas: formato, tono, orden, estilo de citas (APA 7…), dónde lo dejas]
+
+ARCHIVOS GENERADOS Y VERSIONES
+Cualquier archivo que generes como resultado del trabajo (documentos, resúmenes, esquemas, presentaciones,
+hojas de cálculo, tablas de datos, planificaciones de entrenamiento y similares) se guarda en salidas/,
+nunca solo en el chat ni fuera de la carpeta.
+Nombre de cada archivo: nombre_vX.Y.ext (por ejemplo, marco_teorico_v1.2.docx).
+Las versiones empiezan en 1.0 y suben en orden lógico: 1.1, 1.2… para cambios pequeños; 2.0 para un
+cambio grande de contenido o estructura. Usa tu criterio y dilo al terminar.
+No se sobrescribe una versión anterior: se queda en salidas/ y la nueva se añade al lado con su número.
+Cada versión nueva se apunta en registro.md: qué cambia respecto a la anterior y por qué.
+
+QUÉ NO HACES NUNCA
+- Borrar, mover o sobrescribir nada de material/.
+- Tocar archivos fuera de esta carpeta.
+- Cambiar REGLAS.md o CLAUDE.md sin que te lo pida (salvo rellenar los huecos al empezar, como se explica arriba).
+- Enviar, publicar o compartir nada hacia fuera sin mi confirmación.
+- Inventar ni completar referencias: si falta el año, el DOI o la página, lo dices. Nunca citas un artículo que no esté en material/.
+- Meter datos personales identificables en salidas/: nada de nombres ni datos de salud de deportistas o participantes. Se anonimiza (sujeto 1, sujeto 2…).
+- Tocar los datos brutos: las mediciones originales no se corrigen ni se &quot;limpian&quot;. Cualquier análisis se hace sobre una copia en salidas/.
+- Saltarte la rúbrica: si hay guía docente o rúbrica en material/, manda sobre tu criterio.
+- Dar una fuente por buena sin decir qué es: indicas siempre si es una revisión sistemática, un estudio aislado o una web divulgativa.
+- [los propios de esta tarea]
+
+SI DUDAS
+Paras, me lo preguntas en el chat y lo apuntas en registro.md como DUDA, con el motivo. No sigas adivinando.
+
+AL TERMINAR
+Apuntas en registro.md lo que has hecho (o lo que ha fallado) con este formato, añadiendo siempre al final:
+
+## AAAA-MM-DD
+- HECHO: qué has hecho, en una línea.
+- VERSIÓN: salidas/nombre_vX.Y.ext — qué cambia y por qué.
+- FALLO: qué ha fallado y por qué.
+- DUDA: qué necesitas que decida yo. (pendiente)
+
+Solo pones las líneas que tocan ese día. Nunca borras ni reescribes entradas anteriores: si una duda se
+resuelve, lo apuntas en la entrada del día como &quot;DUDA resuelta (del AAAA-MM-DD): …&quot;.
+
+ARRANCAS cuando yo escriba: comencemos
+Hasta entonces solo lees y esperas (salvo la puesta en marcha de arriba, si hay huecos).
+
+A partir de ahora hazlo así sin que te lo repita.</pre>
+    <button class="btn alt" onclick="cp('p3',this)">Copiar</button>
+  </details>
+  <p class="note" style="margin-top:14px">Método inspirado en "Sistemas: la guía del método", de Rubén Loan.</p>
+</section>
+
+<section id="fotos">
+  <p class="tag">Prompt · Fotos antiguas</p>
+  <h2>Restaurar fotos antiguas con IA</h2>
+  <p>El prompt que uso para restaurar una foto sin cambiar a las personas. Pensado para Gemini. Sube la foto, copia el prompt y pégalo en el mismo mensaje.</p>
+  <pre id="p4">Actúa como un restaurador profesional de fotografía antigua. Te adjunto una foto deteriorada. Restáurala siguiendo estas reglas.
+
+OBJETIVO
+La misma foto, con las mismas personas y la misma escena, pero nítida y sin daños.
+
+MANTENER IGUAL (no negociable)
+- Las caras: no cambies facciones, expresión, edad, forma de ojos, nariz, boca, pelo ni proporciones. Si no puedes mejorar una cara sin alterarla, déjala como está y avísame.
+- La composición: encuadre, pose, ropa, fondo y objetos. No añadas, quites ni muevas nada. No recortes ni cambies las proporciones de la imagen.
+
+MEJORAR
+- Repara arañazos, grietas, manchas, polvo, dobleces, zonas descoloridas y ruido.
+- Aumenta la definición real (textura de piel, pelo y tela) con grano fotográfico natural. Evita el efecto plástico, la piel lisa y el aspecto de ilustración.
+- Corrige contraste y exposición. El resultado debe ser fotorrealista, como una foto de la época en perfecto estado.
+
+LO QUE FALTE
+Si una zona se ha perdido por completo, no la inventes: déjala neutra y dímelo.
+
+ENTREGA DOS VERSIONES
+A) Fiel al original: conserva el blanco y negro o el sepia, solo restaurada.
+B) Coloreada: con tonos naturales y sobrios, propios de la época.
+Con la misma resolución o mayor. Después de las imágenes, resume en tres líneas qué has reparado y qué has supuesto en el color.</pre>
+  <button class="btn" onclick="cp('p4',this)">Copiar el prompt</button>
+  <details>
+    <summary>Versión en inglés</summary>
+    <pre id="p5">Act as a professional photo restorer. I&#x27;m attaching a damaged old photograph. Restore it following these rules.
+
+GOAL
+The same photo, with the same people and the same scene, but sharp and free of damage.
+
+KEEP EXACTLY THE SAME (non-negotiable)
+- Faces: do not change facial features, expression, age, eye, nose or mouth shape, hair or proportions. If you can&#x27;t improve a face without altering it, leave it as it is and tell me.
+- Composition: framing, pose, clothing, background and objects. Don&#x27;t add, remove or move anything. Don&#x27;t crop or change the image proportions.
+
+IMPROVE
+- Repair scratches, cracks, stains, dust, creases, faded areas and noise.
+- Increase real detail (skin, hair and fabric texture) with natural photographic grain. Avoid the plastic look, smooth skin and an illustrated style.
+- Correct contrast and exposure. The result must be photorealistic, like a period photo in perfect condition.
+
+MISSING AREAS
+If an area is completely lost, don&#x27;t invent it: leave it neutral and tell me.
+
+DELIVER TWO VERSIONS
+A) Faithful to the original: keep the black and white or sepia, only restored.
+B) Colorized: natural, restrained tones appropriate to the era.
+Same resolution or higher. After the images, summarize in three lines what you repaired and what you assumed about the color.</pre>
+    <button class="btn alt" onclick="cp('p5',this)">Copy the prompt</button>
+  </details>
+  <details>
+    <summary>Si la IA te cambia las caras, pega esto</summary>
+    <pre id="p6">Las caras han cambiado respecto al original. Repite la restauración manteniendo exactamente las facciones, la expresión y las proporciones de la foto que te adjunté. Si no puedes, deja las caras sin tocar y restaura solo el resto.</pre>
+    <button class="btn alt" onclick="cp('p6',this)">Copiar</button>
+    <p class="note">En inglés:</p>
+    <pre id="p7">The faces have changed compared to the original. Redo the restoration keeping exactly the facial features, expression and proportions of the photo I attached. If you can&#x27;t, leave the faces untouched and restore only the rest.</pre>
+    <button class="btn alt" onclick="cp('p7',this)">Copy</button>
+  </details>
+  <p style="margin-top:16px"><strong>Cinco consejos</strong></p>
+  <ol>
+    <li>Escanea o fotografía la foto con buena luz y la máxima resolución posible.</li>
+    <li>Sube una sola foto por conversación y empieza una nueva si el resultado se desvía.</li>
+    <li>Compara con el original ampliando las caras.</li>
+    <li>Guarda siempre el original y trabaja con una copia.</li>
+    <li>Ningún prompt garantiza al 100 % que las caras no cambien: por eso pide la versión fiel (A) y úsala como referencia. La versión coloreada es una suposición de la IA.</li>
+  </ol>
+</section>
+
+<section id="fuentes">
+  <p class="tag">Mi método</p>
+  <h2>Cómo me mantengo informado</h2>
+  <ul>
+    <li><strong>Instagram:</strong> sigo a muchos creadores de contenido sobre IA.</li>
+    <li><strong>YouTube:</strong> canales que sigo sobre IA:
+      <ul>
+        <li><a href="https://www.youtube.com/@alejavirivera">Alejavi Rivera</a></li>
+        <li><a href="https://www.youtube.com/@la_inteligencia_artificial">Inteligencia Artificial</a> (Jon Hernández)</li>
+        <li><a href="https://www.youtube.com/@DotCSVLab">Dot CSV Lab</a></li>
+        <li><a href="https://www.youtube.com/@EugeOller">Euge Oller</a></li>
+        <li><a href="https://www.youtube.com/@Executive-Lab">Executive Lab</a></li>
+      </ul></li>
+    <li><strong>X (Twitter):</strong> lo uso poco, pero es un sitio interesante.</li>
+    <li><strong>Jeff Nippard:</strong> un post suyo sobre redundancias entre ejercicios me hizo cambiar mi entreno. Leí los artículos científicos que citaba y se los di a la IA como contexto.</li>
+  </ul>
+  <p class="note">Sin obsesionarme: informarme yo primero y darle buen contexto a la IA es lo que mejor me ha funcionado.</p>
+</section>
+
+<section id="contacto">
+  <p class="tag">Contacto</p>
+  <h2>Pedir más información</h2>
+  <p>¿Quieres que te cuente más, probar algo de lo que he enseñado o que lo adaptemos a tu caso? Escríbeme y te respondo.</p>
+  <div class="btns">
+    <a class="btn" id="mail" href="#contacto">Escribirme un correo</a>
+    <button class="btn alt" id="mailcopy" onclick="cpm(this)">Copiar la dirección</button>
+  </div>
+  <p class="note" style="margin-top:14px" id="mailtxt">Activa JavaScript para ver la dirección.</p>
+</section>
+
+<footer>Sesión de networking · UNED Pamplona · 28 de octubre de 2026</footer>
+</div>
+<script>
+function cp(id,b){var t=document.getElementById(id).innerText,o=b.innerText;
+  function ok(){b.innerText='Copiado ✓';setTimeout(function(){b.innerText=o},1800)}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fb)}else fb();
+  function fb(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(e){}document.body.removeChild(a)}}
+</script>
+<script>var ZB="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";
+function dlz(){var s=atob(ZB),a=new Uint8Array(s.length);for(var i=0;i<s.length;i++)a[i]=s.charCodeAt(i);
+var u=URL.createObjectURL(new Blob([a],{type:"application/zip"})),l=document.createElement("a");l.href=u;l.download="plantilla_sistema.zip";document.body.appendChild(l);l.click();setTimeout(function(){document.body.removeChild(l);URL.revokeObjectURL(u)},500)}</script>
+<script>(function(){var u=["levanteunavion","ia"].join("."),d=["gmail","com"].join("."),a=u+"@"+d;
+var s=encodeURIComponent("Charla IA · Sesión de networking"),b=encodeURIComponent("Hola Eloy,\n\nEstuve en tu charla y me gustaría saber más sobre: ");
+document.getElementById("mail").href="mailto:"+a+"?subject="+s+"&body="+b;
+document.getElementById("mailtxt").textContent=a;window.__a=a})();
+function cpm(b){var t=window.__a,o=b.innerText;function ok(){b.innerText="Copiado ✓";setTimeout(function(){b.innerText=o},1800)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok)}else{var x=document.createElement("textarea");x.value=t;document.body.appendChild(x);x.select();try{document.execCommand("copy");ok()}catch(e){}document.body.removeChild(x)}}</script>
+</body>
+</html>
